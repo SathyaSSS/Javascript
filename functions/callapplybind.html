@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name ={
+            firstname:"sathya",
+            lastname :"T",
+        }
+        let name1 ={
+            firstname:"subaa",
+            lastname :"T",
+        }
+        let fullname = function (hometown,state){
+            console.log(this.firstname+" "+this.lastname+" "+hometown+" "+state);
+        }
+        fullname.call(name,"cbe","Tamilnadu");
+        fullname.apply(name1,["coimbatore","TN"]);
+
+         let myname = fullname.bind(name,"cbe","TN");
+        //  console.log(myname);
+         myname();
+    </script>
+</body>
+</html>

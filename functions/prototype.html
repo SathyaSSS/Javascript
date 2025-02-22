@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function students(sname,sid,syob){
+            this.sname =sname;
+            this.sid = sid;
+            this.syob = syob;
+        }
+        students.prototype.calcage = function(){
+            let d1 = new Date();
+            let curryear = d1.getFullYear();
+            let age = curryear - this.syob;
+            console.log("age is" +age);
+        }
+        students.prototype.city="bangalore";
+        let s1 = new students("sathya",101,2003);
+        console.log(s1);
+        s1.calcage();
+        console.log("city is"+s1.city);
+        console.log(s1._proto_);
+        
+        
+    </script>
+</body>
+</html>

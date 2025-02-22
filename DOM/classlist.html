@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+         .virat{
+            color: white;
+            background: black;
+        }
+
+          .rohit{
+            border: 2px solid blue;
+        }
+
+         .sathya{ 
+            color: red;
+        }
+
+        .shree{
+            color: green;
+        }  
+
+    </style>
+</head>
+<body>
+    <h2 id="a" class="virat rohit">WELCOME TO DOM</h2>
+    <script>
+        let h2 = document.getElementById("a")
+
+        let classlists = h2.classlist
+        // console.log(classlists);
+
+        //add classlist
+
+        h2.classList.add("sathya")
+        h2.classList.add("subaa")
+
+        // remove
+        h2.classList.remove("virat")
+
+        // replace
+        h2.classList.replace("sathya","shree")
+
+        //toggle
+
+        h2.classList.toggle("rohit")
+        h2.classList.toggle("rohit")
+        h2.classList.toggle("rohit")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button>SHOW NAME</button>
+
+    <script>
+        let inputTag = document.getElementById("name")
+        let btn = document.querySelector("button")
+        inputTag.addEventListener("click",()=>{
+            console.log(inputTag.value);
+            inputTag.value = " "    
+        })
+
+        inputTag.addEventListener("input",()=>{
+            console.log(inputTag.value);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let trainer = {
+            name : "sathya",
+            age : 21,
+            address: "Tn"
+        }
+        localStorage.setItem("trainer",JSON.stringify(trainer));
+        let res1=JSON.stringify(localStorage.getItem("trainer"));
+        console.log(res1,typeof res1);
+        console.log(res1.age);
+
+        sessionStorage.setItem("trainer",JSON.stringify(trainer));
+        let res2 = JSON.parse(sessionStorage.getItem("trainer"));
+        console.log(res2,typeof res2);
+        console.log(res2.age);
+        
+        
+        
+        
+</script> 
+
+</body>
+</html>

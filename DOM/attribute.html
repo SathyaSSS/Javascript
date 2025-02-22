@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #para{
+        color: red;
+    }
+</style>
+<body>
+    <p class="hello" id="one"> HELLO SATHYA</p>
+    <script>
+        let pTag = document.querySelector("p")
+        
+        //setting attribute
+
+        pTag.setAttribute("id","para")
+        pTag.setAttribute("align","center")
+
+        // getting attribute
+        let p = pTag.getAttribute("id")
+        console.log(p);
+
+        // remove attribute
+
+        pTag.removeAttribute("align")
+
+        // has attribute
+
+        let result1 = pTag.hasAttribute("class")
+        let result2 = pTag.hasAttribute("id")
+        console.log(result1,result2);
+    </script>
+    
+</body>
+</html>

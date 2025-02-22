@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">display</button>
+    <script>
+        // function print(){
+        //     console.log("somebody clicked me");            
+        // }
+
+        let btn=document.getElementById("btn")
+        btn.onclick = displaymsg
+        function displaymsg(){
+            console.log("hi");
+        }
+        btn.addEventListener("click",()=>{
+            console.log("btn is clicked");
+        })
+        btn.addEventListener("mouseover",()=>{
+            console.log("mouseover event"); 
+        })
+            
+      
+    </script>
+    
+</body>
+</html>
