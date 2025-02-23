@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("starts");
+        const isEligible =(age) => {
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    if (age >=18){
+                        res("user is eligible to vote")
+                    }else{
+                        rej("user is not eligible to vote")
+                    }
+                },3000)
+            })
+        }
+
+        const asyncfunc = async() =>{
+            try{
+                let result = await isEligible(21)
+                console.log(result);   
+            } catch(error) {
+                console.log(error);   
+            }
+        }
+        asyncfunc()
+
+        const asyncfunc1 = async() =>{
+            try{
+                let result = await isEligible(12) 
+            } catch(error){
+                console.log(error);   
+            }
+        }
+        asyncfunc1()
+
+        console.log("ends");
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: black;
+        }
+        #d2{
+            display: flex;
+            justify-content: center;
+            margin-top: 130px;  
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2"><button id="btn" >START</button></div>
+    </div>
+    <script>
+        let div1 = document.querySelector("#d1")
+        let btn = document.getElementById("btn")
+        let interval
+
+        btn.addEventListener("click",()=>{
+            if (btn.innerText == "START"){
+                if (!interval){
+                    interval = setInterval(()=>{
+                        if (div1.style.backgroundColor =="red"){
+                            div1.style.backgroundColor="blue"
+                        } else {
+                            div1.style.backgroundColor="red"
+                        }
+                    },500)
+                }
+                btn.innerText="STOP"
+            } else{
+                clearInterval(interval)
+                btn.innerText = "START"
+                interval=undefined
+            }
+        })
+    </script>
+</body>
+</html>

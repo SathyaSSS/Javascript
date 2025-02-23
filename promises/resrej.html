@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("starts");
+        const isEligible =(age) => {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    if (age >=18){
+                        resolve("user is eligible to vote")
+                    }else{
+                        reject("user is not eligible to vote")
+                    }
+                },3000)
+            })
+        }
+        isEligible(21).then(data => console.log(data))
+                      .catch(error => console.log(error))
+        isEligible(17).then(data => console.log(data))
+                      .catch(error => console.log(error))
+        console.log("ends");
+    </script>
+</body>
+</html>

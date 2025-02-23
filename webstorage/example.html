@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="inc">+</button>
+        <b id="count">0</b>
+        <button id="dec">-</button>
+    </div>
+    <script>
+        let count = document.getElementById("count")
+        let countvalue = localStorage.getItem("count") ? localStorage.getItem("count"):0
+        count.innerHTML = countvalue;
+
+        document.getElementById("inc").addEventListener("click", () => {
+            count.innerHTML = ++countvalue;
+            localStorage.setItem("count",countvalue);
+        });
+
+        document.getElementById("dec").addEventListener("click",()=>{
+            count.innerHTML = --countvalue;
+            localStorage.setItem("count",countvalue)
+        });
+
+       
+
+
+            
+
+       
+    </script>
+</body>
+</html>
